@@ -1,34 +1,33 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar" dir="rtl">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Dhafer - CV</title>
+<title>ظافر - السيرة الذاتية</title>
 <style>
-  :root { --bg:#f1f1f1; --card:#fff; --text:#222; --muted:#666; --accent:#009688; --bar:#e5e5e5; }
+  :root { --bg:#f1f1f1; --card:#fff; --text:#222; --muted:#666; --accent:#009688; }
   * { box-sizing:border-box; margin:0; padding:0; }
-  body { font-family:Arial,Helvetica,sans-serif; background:var(--bg); color:var(--text); line-height:1.6; }
+  body { font-family:Tahoma,"Segoe UI",Arial,sans-serif; background:var(--bg); color:var(--text); line-height:1.8; }
   .page { max-width:1400px; margin:0 auto; padding:16px; display:flex; gap:16px; align-items:flex-start; }
   .card { background:var(--card); border-radius:4px; box-shadow:0 2px 5px rgba(0,0,0,.16); }
   .side { width:33%; }
   .main { width:67%; display:flex; flex-direction:column; gap:16px; }
   .hero { position:relative; }
-  .hero img, .hero .avatar { width:100%; display:block; border-radius:4px 4px 0 0; background:#cfd8dc; aspect-ratio:1/1; object-fit:cover; }
-  .hero h2 { position:absolute; bottom:12px; left:16px; color:#fff; font-size:26px; text-shadow:0 1px 4px rgba(0,0,0,.6); }
+  .hero img { width:100%; display:block; border-radius:4px 4px 0 0; background:#cfd8dc; aspect-ratio:1/1; object-fit:cover; }
+  .hero h2 { position:absolute; bottom:12px; right:16px; color:#fff; font-size:28px; text-shadow:0 1px 4px rgba(0,0,0,.7); }
   .pad { padding:16px; }
   .info p { margin:8px 0; color:var(--muted); }
+  .ltr { direction:ltr; unicode-bidi:embed; text-align:right; }
   hr { border:0; border-top:1px solid #ddd; margin:16px 0; }
   h3.title, h2.title { color:var(--accent); font-size:20px; margin-bottom:10px; }
-  .skill { margin:10px 0 4px; font-size:15px; }
-  .bar { background:var(--bar); border-radius:3px; height:22px; }
-  .bar span { display:block; height:100%; background:var(--accent); color:#fff; font-size:13px; line-height:22px; padding-left:8px; border-radius:3px; }
-  .lang { margin:8px 0; }
-  .lang .bar { height:8px; margin-top:4px; }
-  .lang .bar span { padding:0; }
+  .chips { display:flex; flex-wrap:wrap; gap:8px; }
+  .chip { background:var(--accent); color:#fff; padding:4px 14px; border-radius:16px; font-size:14px; }
+  .lang { display:flex; justify-content:space-between; margin:8px 0; color:var(--muted); }
+  .lang strong { color:var(--text); }
   .job h5 { font-size:16px; }
   .job .date { color:var(--accent); font-size:14px; margin:2px 0 6px; }
   .job + .job { border-top:1px solid #ddd; margin-top:16px; padding-top:16px; }
-  .tag { display:inline-block; background:var(--accent); color:#fff; padding:2px 10px; border-radius:12px; font-size:12px; margin-left:8px; }
+  .tag { display:inline-block; background:var(--accent); color:#fff; padding:2px 10px; border-radius:12px; font-size:12px; margin-right:8px; }
   .social { text-align:center; padding:24px 16px; font-size:15px; }
   .social a { color:var(--accent); text-decoration:none; margin:0 8px; font-weight:bold; }
   .social a:hover { text-decoration:underline; }
@@ -41,74 +40,59 @@
 
   <aside class="side card">
     <div class="hero">
-      <div class="avatar"></div>
-      <h2>Dhafer</h2>
+      <img src="photo.jpg.jpeg" alt="ظافر">
+      <h2>ظافر</h2>
     </div>
     <div class="pad info">
-      <p><strong>Web Developer</strong></p>
-      <p>Dhahran, Saudi Arabia</p>
-      <p>202201394@pmu.edu.sa</p>
-      <p>+966 591930971</p>
+      <p><strong>طالب نظم معلومات إدارية</strong></p>
+      <p>الظهران، المملكة العربية السعودية</p>
+      <p class="ltr">202201394@pmu.edu.sa</p>
+      <p class="ltr">0591930971</p>
       <hr>
 
-      <h3 class="title">Skills</h3>
-      <p class="skill">HTML &amp; CSS</p>
-      <div class="bar"><span style="width:90%">90%</span></div>
-      <p class="skill">JavaScript</p>
-      <div class="bar"><span style="width:80%">80%</span></div>
-      <p class="skill">Python</p>
-      <div class="bar"><span style="width:75%">75%</span></div>
-      <p class="skill">Git &amp; GitHub</p>
-      <div class="bar"><span style="width:60%">60%</span></div>
-      <br>
+      <h3 class="title">المهارات</h3>
+      <div class="chips">
+        <span class="chip">Python</span>
+        <span class="chip">C#</span>
+        <span class="chip">GitHub</span>
+      </div>
       <hr>
 
-      <h3 class="title">Languages</h3>
-      <div class="lang">Arabic<div class="bar"><span style="width:100%"></span></div></div>
-      <div class="lang">English<div class="bar"><span style="width:80%"></span></div></div>
+      <h3 class="title">اللغات</h3>
+      <div class="lang"><strong>العربية</strong><span>اللغة الأم</span></div>
+      <div class="lang"><strong>الإنجليزية</strong><span>متقدم</span></div>
     </div>
   </aside>
+
   <main class="main">
     <section class="card pad">
-      <h2 class="title">Work Experience</h2>
+      <h2 class="title">نبذة عني</h2>
+      <p>أنا ظافر، طالب نظم معلومات إدارية في جامعة الأمير محمد بن فهد. أجمع بين فهم الإدارة والتقنية، وأتعلم البرمجة بلغتي Python وC# وأستخدم GitHub في تنظيم مشاريعي. حاصل على عدة شهادات من Pearson وCisco، وأتقن الإنجليزية بمستوى متقدم، وأطمح لتطوير مهاراتي والانضمام لبيئة عمل أتعلم فيها وأقدّم قيمة حقيقية.</p>
+    </section>
 
+    <section class="card pad">
+      <h2 class="title">التعليم</h2>
       <div class="job">
-        <h5>Front End Developer / Company One <span class="tag">Current</span></h5>
-        <div class="date">Jan 2024 - Present</div>
-        <p>Describe what you did here: the projects you built, the tools you used, and the results you achieved.</p>
-      </div>
-
-      <div class="job">
-        <h5>Web Developer / Company Two</h5>
-        <div class="date">Mar 2022 - Dec 2023</div>
-        <p>Describe your responsibilities and your main achievements in this role.</p>
-      </div>
-
-      <div class="job">
-        <h5>Intern / Company Three</h5>
-        <div class="date">Jun 2021 - Mar 2022</div>
-        <p>Short description of your internship or first role.</p>
+        <h5>جامعة الأمير محمد بن فهد <span class="tag">حاليًا</span></h5>
+        <div class="date">2022 - حتى الآن</div>
+        <p>بكالوريوس في نظم المعلومات الإدارية</p>
       </div>
     </section>
 
     <section class="card pad">
-      <h2 class="title">Education</h2>
-
+      <h2 class="title">الشهادات</h2>
       <div class="job">
-        <h5> Prince Mohammed bin Fahad</h5>
-        <div class="date">2022 - till now</div>
-        <p>Bachelor's Degree in Mangment System</p>
+        <h5>شهادات من Pearson</h5>
+        <p>عدة شهادات مهنية.</p>
       </div>
-
       <div class="job">
-        <h5>Online Courses</h5>
-        <div class="date">2020 - Present</div>
-        <p>W3Schools, freeCodeCamp, and other certifications.</p>
+        <h5>شهادات من Cisco</h5>
+        <p>عدة شهادات مهنية.</p>
       </div>
     </section>
 
     <footer class="card social">
-      Find me on social media:
+      تابعني على:
       <a href="https://github.com/Dhafer-121" target="_blank" rel="noopener">GitHub</a>
     </footer>
   </main>
